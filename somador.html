@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <title>Somador</title>
+  </head>
+  <body>
+    <h1>Somadores</h1>
+        <!--navbar-->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-item nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+              <a class="nav-item nav-link" href="simulador.html">Simulador</a>
+              <a class="nav-item nav-link active" href="#">Somador</a>
+              <a class="nav-item nav-link" href="flip.html">Flip-flop</a>
+            </div>
+          </div>
+        </nav>
+        <!--Introduction-->
+        <div style="width: 70%; background-color: white; margin: auto; border-radius: 12px; text-align: center;">
+            Os circuitos abaixo estão fazendo a seguinte soma (na base binária):
+          <div style="position: relative; left: -250px; top: 30px;">
+            <table>
+              <tbody>
+                <tr>
+                  <td>C1</td>
+                  <td>C0</td>
+                  <td> </td>
+                </tr>
+                <tr>
+                  <td> </td>
+                  <td>A1</td>
+                  <td>A0</td>
+                </tr>
+                <tr>
+                  <td>+</td>
+                  <td>B1</td>
+                  <td>B0</td>
+                </tr>
+                <tr>
+                  <td> </td>
+                  <td>S1</td>
+                  <td>S0</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div style="position: relative; top: -80px; left: 250px;">
+            <table>
+              <tbody>
+                <tr>
+                  <td id="C1">0</td>
+                  <td id="C0">0</td>
+                  <td> </td>
+                </tr>
+                <tr>
+                  <td> </td>
+                  <td id="A1">0</td>
+                  <td id="A0">0</td>
+                </tr>
+                <tr>
+                  <td>+</td>
+                  <td id="B1">0</td>
+                  <td id="B0">0</td>
+                </tr>
+                <tr>
+                  <td> </td>
+                  <td id="S1">0</td>
+                  <td id="S0">0</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          Onde: A1 e A0 são dígitos da parcela A, B1 e B0 são dígitos da parcela B,<br>
+          S1 e S0 são dígitos da soma e C0 e C1 são os carries (vai um).<br>
+          Mude as variáves de entrada e observe a mudança no resultado.
+        </div>
+        <br>
+        <!--half adder box-->
+        <h1>Meio somador</h1>
+        <div style="width: 70%; background-color: white; margin: auto; border-radius: 12px; text-align: center;">
+          <image src="images/meio_somador.jpg" alt="meio somador"
+          style="position: relative; left: 100px;"></image>
+          <!--A0-->
+          <label for="SA0" style="position: relative; left: -280px; top: -80px;">A0</label>
+          <image src="images/low-level.png" alt="nível lógico" id="SA0" onclick="A0.change_me(); half.calculate(); full.calculate();"
+          style="position: relative; left: -280px; top: -80px;"></image>
+          <!--B0-->
+          <label for="SB0" style="position: relative; left: -355px; top: 50px;">B0</label>
+          <image src="images/low-level.png" alt="nível lógico" id="SB0" onclick="B0.change_me(); half.calculate(); full.calculate();"
+          style="position: relative; left: -355px; top: 50px;"></image>
+          <!--S0-->
+          <label for="SS0" style="position: relative; left: -30px; top: -65px;">S0</label>
+          <image src="images/low-level.png" alt="nível lógico" id="SS0"
+          style="position: relative; left: -30px; top: -65px;"></image>
+          <!--C0-->
+          <label for="SC0" style="position: relative; left: -100px; top: 65px;">C0</label>
+          <image src="images/low-level.png" alt="nível lógico" id="SC0"
+          style="position: relative; left: -100px; top: 65px;"></image>
+        </div>
+        <!--full adder box-->
+        <br>
+        <h1>Somador completo</h1>
+        <div style="width: 70%; background-color: white; margin: auto; border-radius: 12px;
+        text-align: center; height: 470px;">
+          <image src="images/somador_completo.jpg" alt="somador completo"
+          style="position: relative; left: 200px; top: 30px; height: 400px"></image>
+          <!--A1-->
+          <label for="SA1" style="position: relative; left: -430px; top: -130px;">A1</label>
+          <image src="images/low-level.png" alt="nível lógico" id="SA1" onclick="A1.change_me(); full.calculate();"
+          style="position: relative; left: -430px; top: -130px;"></image>
+          <!--B1-->
+          <label for="SB1" style="position: relative; left: -508px; top: -80px;">B1</label>
+          <image src="images/low-level.png" alt="nível lógico" id="SB1" onclick="B1.change_me(); full.calculate();"
+          style="position: relative; left: -508px; top: -80px;"></image>
+          <!--Cin-->
+          <label for="SCin" style="position: relative; left: -623px; top: -30px;">Cin=C0</label>
+          <image src="images/low-level.png" alt="nível lógico" id="SCin"
+          style="position: relative; left: -623px; top: -30px;"></image>
+          <!--S1-->
+          <label for="SS1" style="position: relative; left: -30px; top: -80px;">S1</label>
+          <image src="images/low-level.png" alt="nível lógico" id="SS1"
+          style="position: relative; left: -30px; top: -80px;"></image>
+          <!--C1-->
+          <label for="SC1" style="position: relative; left: -100px; top: 95px;">C1</label>
+          <image src="images/low-level.png" alt="nível lógico" id="SC1"
+          style="position: relative; left: 385px; top: -130px;"></image>
+        </div>
+        <br>
+        <script src="somador.js"></script>
+  </body>
+</html>

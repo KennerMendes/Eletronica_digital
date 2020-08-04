@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+    <head>
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Home</title>
+    </head>
+    <body>
+        <h1>Álgebra Booleana e Eletrônica Digital</h1>
+        <!--navbar-->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+              <a class="nav-item nav-link" href="simulador.html">Simulador</a>
+              <a class="nav-item nav-link" href="somador.html">Somador</a>
+              <a class="nav-item nav-link" href="flip.html">Flip-flop</a>
+            </div>
+          </div>
+        </nav>
+        <!--indicators-->
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active" id="ind0"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1" id="ind1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2" id="ind2"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="3" id="ind3"></li>
+  </ol>
+  <!--slides-->
+  <div class="carousel-inner" style = "text-align: center;">
+    <div class="carousel-item active" id = "carousel-img0">
+      <img src="images/Boole.jpg" class="carousel-image" alt="George Boole">
+    </div>
+    <div class="carousel-item" id = "carousel-img1">
+      <img src="images/Claude.jpg" class="carousel-image" alt="Claude Shannon">
+    </div>
+    <div class="carousel-item" id = "carousel-img2">
+      <img src="images/portas-lógicas.jpg" class="carousel-image" alt="Portas lógicas">
+    </div>
+    <div class="carousel-item" id = "carousel-img3">
+      <img src="images/CPU.jpg" class="carousel-image" alt="CPU">
+    </div>
+  </div>
+  <!--controls-->
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev" id = "prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next" id = "next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+<div class="position: absolute; top: 525px">
+<p class="sources">Para mais informações consulte o livro Elementos de eletrônica digital de Ivan Valeije Idoeta e Francisco Gabriel Capuano, inpiração desse conteúdo.</p>
+</div>
+<!--table container-->
+<div class="table-style">
+  <h2>Tabela Resumo</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Operação</th>
+        <th>Símbolo esquemático</th>
+        <th>Tabela verdade</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>AND</td>
+        <td><image src="images/portaAND.png" class="table-image" alt="Porta lógica AND"></image></td>
+        <td>
+          <table>
+            <thead>
+              <tr>
+                <th>A</th>
+                <th>B</th>
+                <th>A AND B</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+              </tr>
+               <tr>
+                <td>0</td>
+                <td>1</td>
+                <td>0</td>
+              </tr>
+               <tr>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+              </tr>
+               <tr>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td>OR</td>
+        <td><image src="images/portaOR.png" class="table-image" alt="Porta lógia OR"></image></td>
+        <td>
+          <table>
+            <thead>
+              <tr>
+                <th>A</th>
+                <th>B</th>
+                <th>A OR B</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+              </tr>
+               <tr>
+                <td>0</td>
+                <td>1</td>
+                <td>1</td>
+              </tr>
+               <tr>
+                <td>1</td>
+                <td>0</td>
+                <td>1</td>
+              </tr>
+               <tr>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td>XOR</td>
+        <td><image src="images/portaXOR.png" class="table-image" alt="Porta lógica XOR"></image></td>
+        <td>
+          <table>
+            <thead>
+              <tr>
+                <th>A</th>
+                <th>B</th>
+                <th>A XOR B</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+              </tr>
+               <tr>
+                <td>0</td>
+                <td>1</td>
+                <td>1</td>
+              </tr>
+               <tr>
+                <td>1</td>
+                <td>0</td>
+                <td>1</td>
+              </tr>
+               <tr>
+                <td>1</td>
+                <td>1</td>
+                <td>0</td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td>NOT</td>
+        <td><image src="images/portaNOT.png" class="table-image" alt="Porta lógica NOT"></image></td>
+        <td>
+          <table>
+            <thead>
+              <tr>
+                <th>A</th>
+                <th>NOT(A)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>0</td>
+                <td>1</td>
+              </tr>
+               <tr>
+                <td>1</td>
+                <td>0</td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="obs">As portas NAND, NOR e XNOR são apenas as portas AND, NOR e XOR seguidas de uma NOT.</p>
+</div>
+<script src="index.js"></script>
+    </body>
+</html>

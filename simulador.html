@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <title>Simulador</title>
+  </head>
+  <body>
+    <h1>Simulador</h1>
+    <!--navbar-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-item nav-link active" href="#">Simulador</a>
+          <a class="nav-item nav-link" href="somador.html">Somador</a>
+          <a class="nav-item nav-link" href="flip.html">Flip-flop</a>
+        </div>
+      </div>
+    </nav>
+    <h3>Clique nas entradas à esquerda para mudar os níveis lógicos, mude as operações booleanas e observe os resultados.</h3>
+    <!--simulator workspace-->
+    <!--first 3 logic gates-->
+    <div style="width: 70%; background-color: white; margin: auto; border-radius: 12px; height: 800px;">
+      <div style="position: relative; top: 30px;">
+        <image src="images/low-level.png" alt="Nível lógico 0" style="position: relative; top: 65px; left: 25px; width: 30px;"
+        id="state_0" onclick="state_0.change_me(); gate_0.select_gate(); gate_2.select_gate(); gate_6.select_gate();"></image>
+        <image src="images/low-level.png" alt="Nível lógico 0" style="position: relative; top: 145px; left: -10px; width: 30px;"
+        id="state_1" onclick="state_1.change_me(); gate_0.select_gate(); gate_2.select_gate(); gate_6.select_gate();"></image>
+      </div>
+      <div style="position: relative; top: 160px;">
+        <image src="images/low-level.png" alt="Nível lógico 0" style="position: relative; top: 65px; left: 25px; width: 30px;"
+        id="state_2" onclick="state_2.change_me(); gate_1.select_gate(); gate_2.select_gate(); gate_6.select_gate();"></image>
+        <image src="images/low-level.png" alt="Nível lógico 0" style="position: relative; top: 145px; left: -10px; width: 30px;"
+        id="state_3" onclick="state_3.change_me(); gate_1.select_gate(); gate_2.select_gate(); gate_6.select_gate();"></image>
+      </div>
+      <div style="position: relative; left: 70px;">
+        <div>
+         <select name="cars" id="gate_0" onchange="gate_0.select_gate(); gate_2.select_gate(); gate_6.select_gate();">
+           <option value=""></option>
+           <option value="AND">AND</option>
+           <option value="OR">OR</option>
+           <option value="XOR">XOR</option>
+           <option value="NAND">NAND</option>
+           <option value="NOR">NOR</option>
+           <option value="XNOR">XNOR</option>
+         </select>
+         <br>
+         <canvas style="height: 130px;" class="gates" id="canvas_0">
+         </canvas>
+        </div>
+        <div>
+         <select name="cars" id="gate_1" onchange="gate_1.select_gate(); gate_2.select_gate(); gate_6.select_gate();">
+           <option value=""></option>
+           <option value="AND">AND</option>
+           <option value="OR">OR</option>
+           <option value="XOR">XOR</option>
+           <option value="NAND">NAND</option>
+           <option value="NOR">NOR</option>
+           <option value="XNOR">XNOR</option>
+         </select>
+         <br>
+         <canvas style="height: 130px;" class="gates" id="canvas_1">
+         </canvas>
+        </div>
+        <div style="position: relative; top: -300px; left: 290px;">
+         <select name="cars" id="gate_2" onchange="gate_2.select_gate(); gate_6.select_gate();">
+           <option value=""></option>
+           <option value="AND">AND</option>
+           <option value="OR">OR</option>
+           <option value="XOR">XOR</option>
+           <option value="NAND">NAND</option>
+           <option value="NOR">NOR</option>
+           <option value="XNOR">XNOR</option>
+         </select>
+         <br>
+         <canvas style="height: 260px;" class="gates" id="canvas_2">
+         </canvas>
+        </div>
+      </div>
+      <!--the next div contains logic gates from 3 to 5. Your purpouse is more easily move the gates-->
+      <div style="position: relative; top: -315px;">
+        <div style="position: relative; top: 30px;">
+          <image src="images/low-level.png" alt="Nível lógico 0" style="position: relative; top: 65px; left: 25px; width: 30px;"
+          id="state_4" onclick="state_4.change_me(); gate_3.select_gate(); gate_5.select_gate(); gate_6.select_gate();"></image>
+          <image src="images/low-level.png" alt="Nível lógico 0" style="position: relative; top: 145px; left: -10px; width: 30px;"
+          id="state_5" onclick="state_5.change_me(); gate_3.select_gate(); gate_5.select_gate(); gate_6.select_gate();"></image>
+        </div>
+        <div style="position: relative; top: 160px;">
+          <image src="images/low-level.png" alt="Nível lógico 0" style="position: relative; top: 65px; left: 25px; width: 30px;"
+          id="state_6" onclick="state_6.change_me(); gate_4.select_gate(); gate_5.select_gate(); gate_6.select_gate();"></image>
+          <image src="images/low-level.png" alt="Nível lógico 0" style="position: relative; top: 145px; left: -10px; width: 30px;"
+          id="state_7" onclick="state_7.change_me(); gate_4.select_gate(); gate_5.select_gate(); gate_6.select_gate();"></image>
+        </div>
+        <div style="position: relative; left: 70px;">
+          <div>
+           <select name="cars" id="gate_3" onchange="gate_3.select_gate(); gate_5.select_gate(); gate_6.select_gate();">
+             <option value=""></option>
+             <option value="AND">AND</option>
+             <option value="OR">OR</option>
+             <option value="XOR">XOR</option>
+             <option value="NAND">NAND</option>
+             <option value="NOR">NOR</option>
+             <option value="XNOR">XNOR</option>
+           </select>
+           <br>
+           <canvas style="height: 130px;" class="gates" id="canvas_3">
+           </canvas>
+          </div>
+          <div>
+           <select name="cars" id="gate_4" onchange="gate_4.select_gate(); gate_5.select_gate(); gate_6.select_gate();">
+             <option value=""></option>
+             <option value="AND">AND</option>
+             <option value="OR">OR</option>
+             <option value="XOR">XOR</option>
+             <option value="NAND">NAND</option>
+             <option value="NOR">NOR</option>
+             <option value="XNOR">XNOR</option>
+           </select>
+           <br>
+           <canvas style="height: 130px;" class="gates" id="canvas_4">
+           </canvas>
+          </div>
+          <div style="position: relative; top: -300px; left: 290px;">
+           <select name="cars" id="gate_5" onchange="gate_5.select_gate(); gate_6.select_gate();">
+             <option value=""></option>
+             <option value="AND">AND</option>
+             <option value="OR">OR</option>
+             <option value="XOR">XOR</option>
+             <option value="NAND">NAND</option>
+             <option value="NOR">NOR</option>
+             <option value="XNOR">XNOR</option>
+           </select>
+           <br>
+           <canvas style="height: 260px;" class="gates" id="canvas_5">
+           </canvas>
+          </div>
+        </div>
+      </div>
+      <!--last gate (6)-->
+      <div style="position: relative; top: -1080px; left: 645px;">
+           <select name="cars" id="gate_6" onchange="gate_6.select_gate();">
+             <option value=""></option>
+             <option value="AND">AND</option>
+             <option value="OR">OR</option>
+             <option value="XOR">XOR</option>
+             <option value="NAND">NAND</option>
+             <option value="NOR">NOR</option>
+             <option value="XNOR">XNOR</option>
+           </select>
+           <br>
+           <canvas style="height: 260px;" class="gates" id="canvas_6">
+           </canvas>
+      </div>
+    </div>
+    <script src="simulator.js"></script>
+  </body>
+</html>
