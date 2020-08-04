@@ -31,13 +31,13 @@ Operation.prototype.select_gate = function()
     let img_state = new Image();
     if(result === true)
     {
-      img_state.src = "images/high-level.png";
+      img_state.src = "high-level.png";
     }
     else
     {
-      img_state.src = "images/low-level.png";
+      img_state.src = "low-level.png";
     }
-    img_gate.src = "images/portaAND.png"
+    img_gate.src = "portaAND.png"
     img_gate.onload = function()
     {
       ctx.drawImage(img_gate, 0, 10, 220, 150);
@@ -58,13 +58,13 @@ Operation.prototype.select_gate = function()
     let img_state = new Image();
     if(result === true)
     {
-      img_state.src = "images/high-level.png";
+      img_state.src = "high-level.png";
     }
     else
     {
-      img_state.src = "images/low-level.png";
+      img_state.src = "low-level.png";
     }
-    img_gate.src = "images/portaOR.png"
+    img_gate.src = "portaOR.png"
     img_gate.onload = function()
     {
       ctx.drawImage(img_gate, 0, 10, 220, 150);
@@ -85,13 +85,13 @@ Operation.prototype.select_gate = function()
     let img_state = new Image();
     if(result === true)
     {
-      img_state.src = "images/high-level.png";
+      img_state.src = "high-level.png";
     }
     else
     {
-      img_state.src = "images/low-level.png";
+      img_state.src = "low-level.png";
     }
-    img_gate.src = "images/portaXOR.png"
+    img_gate.src = "portaXOR.png"
     img_gate.onload = function()
     {
       ctx.drawImage(img_gate, 0, 5, 220, 140);
@@ -112,13 +112,13 @@ Operation.prototype.select_gate = function()
     let img_state = new Image();
     if(result === true)
     {
-      img_state.src = "images/high-level.png";
+      img_state.src = "high-level.png";
     }
     else
     {
-      img_state.src = "images/low-level.png";
+      img_state.src = "low-level.png";
     }
-    img_gate.src = "images/portaNAND.png"
+    img_gate.src = "portaNAND.png"
     img_gate.onload = function()
     {
       ctx.drawImage(img_gate, 0, 10, 220, 150);
@@ -139,13 +139,13 @@ Operation.prototype.select_gate = function()
     let img_state = new Image();
     if(result === true)
     {
-      img_state.src = "images/high-level.png";
+      img_state.src = "high-level.png";
     }
     else
     {
-      img_state.src = "images/low-level.png";
+      img_state.src = "low-level.png";
     }
-    img_gate.src = "images/portaNOR.png"
+    img_gate.src = "portaNOR.png"
     img_gate.onload = function()
     {
       ctx.drawImage(img_gate, 0, 0, 220, 150);
@@ -166,13 +166,13 @@ Operation.prototype.select_gate = function()
     let img_state = new Image();
     if(result === true)
     {
-      img_state.src = "images/high-level.png";
+      img_state.src = "high-level.png";
     }
     else
     {
-      img_state.src = "images/low-level.png";
+      img_state.src = "low-level.png";
     }
-    img_gate.src = "images/portaXNOR.png"
+    img_gate.src = "portaXNOR.png"
     img_gate.onload = function()
     {
       ctx.drawImage(img_gate, 0, 5, 220, 140);
@@ -196,11 +196,11 @@ states.prototype.change_me = function()
   variables[this.mygate][this.myvar] = !variables[this.mygate][this.myvar];
   if(variables[this.mygate][this.myvar] === true)
   {
-    document.getElementById(this.myid).src = "images/high-level.png";
+    document.getElementById(this.myid).src = "high-level.png";
   }
   else
   {
-    document.getElementById(this.myid).src = "images/low-level.png";
+    document.getElementById(this.myid).src = "low-level.png";
   }
 }
 
